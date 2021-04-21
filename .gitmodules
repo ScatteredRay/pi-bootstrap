@@ -2,3 +2,12 @@
 	path = pi-gen
 	url = https://github.com/aniongithub/pi-gen.git
 	branch = master
+[submodule "sshuserkeys"]
+	path = sshuserkeys
+	url = ../pi-sshuserkeys/
+[submodule "hostnamegen"]
+	path = hostnamegen
+	url = ../pi-hostnamegen/
+[submodule "nomad"]
+	path = nomad
+	url = ../pi-nomad/

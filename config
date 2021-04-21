@@ -18,6 +18,10 @@ export ENABLE_SSH=${SSH_ENABLED}
 # Add additional mounts containing custom steps and files it needs
 export ADDL_MOUNTS="${CONFIG_DIR}/bootstrap:/pi-gen/stage2/90-bootstrap:ro ${CONFIG_DIR}/bootstrap-resources:/bootstrap-resources:ro"
 
+export ADDL_MOUNTS="${ADDL_MOUNTS} ${CONFIG_DIR}/hostnamegen:/pi-gen/stage2/80-hostnamegen:ro"
+export ADDL_MOUNTS="${ADDL_MOUNTS} ${CONFIG_DIR}/sshuserkeys:/pi-gen/stage2/81-sshuserkeys:ro"
+export ADDL_MOUNTS="${ADDL_MOUNTS} ${CONFIG_DIR}/nomad:/pi-gen/stage2/90-nomad:ro"
+
 # We only want to build a lite image
 export STAGE_LIST="stage0 stage1 stage2"
 
